@@ -33,17 +33,21 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
+    // MARK: - UICollectionViewDelegate
   
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userActon = userActons[indexPath.row]
         let storyboardInstance = UIStoryboard(name: "Main", bundle: nil)
         switch userActon {
-            case .downloadImage:
+
+            //        переход на загрузгку картинки
+        case .downloadImage:
                 let nextViewController = storyboardInstance.instantiateViewController(withIdentifier: "ViewController")
                 self.navigationController?.pushViewController(nextViewController, animated: true)
 
-            case .users: performSegue(withIdentifier: "UsersSegue", sender: nil)
+            //        переход на таблицу
+            case .users: let nextViewController = storyboardInstance.instantiateViewController(withIdentifier: "TableViewController")
+                self.navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 
