@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         fetchImage()
     }
 
-    private let imageURLStr = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.wikipedia.org%2Fwiki%2F%25D0%259F%25D1%2580%25D0%25B8%25D1%2580%25D0%25BE%25D0%25B4%25D0%25B0&psig=AOvVaw2AGOjnXAHzL5GQkrkIQB4e&ust=1671981679533000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJj8yqLHkvwCFQAAAAAdAAAAABAJ"
+    private let imageURLStr = "https://img3.badfon.ru/original/6000x4000/1/e9/arizona-horseshoe-bend-river-1468.jpg"
 
     private func fetchImage() {
         guard let url = URL(string: imageURLStr) else {
