@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet var image: UIImageView!
     @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
 
@@ -18,7 +17,7 @@ class ViewController: UIViewController {
     }
 
     private let imageURLStr = "https://img3.badfon.ru/original/6000x4000/1/e9/arizona-horseshoe-bend-river-1468.jpg"
-
+    private let imageDefault = "https://sites.google.com/site/prirodanasevseegooglgfgf/_/rsrc/1463456237313/home/priroda_gory_nebo_ozero_oblaka_81150_1920x1080.jpg"
     private func fetchImage() {
         guard let url = URL(string: imageURLStr) else {
             return
@@ -47,9 +46,10 @@ class ViewController: UIViewController {
                     self.image.image = image
                 } else {
                     // добавить дефолтную картинку
+                    guard URL(string: self.imageDefault) != nil else { return }
                 }
             }
-        } // .resume()
+        }
         task.resume()
     }
 }
