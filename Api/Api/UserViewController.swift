@@ -8,24 +8,33 @@
 import UIKit
 
 class UserViewController: UIViewController {
-
-    @IBOutlet weak var email: UILabel!
-    
-    @IBOutlet weak var phone: UILabel!
-    
-    
-    @IBOutlet weak var website: UILabel!
-    
-    
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var userNameLbl: UILabel!
+    var user: User?
+    @IBOutlet var email: UILabel!
+    @IBOutlet var phone: UILabel!
+    @IBOutlet var website: UILabel!
+    @IBOutlet var nameLbl: UILabel!
+    @IBOutlet var userNameLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
-    }  // In a storyboard-based application, you will often want to do a little preparation before navigation
+        setupUI()
+    }
+
+    @IBAction func post(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Post", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Post") as! PostTableViewController
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
   
+    @IBAction func albumsbtn(_ sender: Any) {}
+
+    @IBAction func toDobtn(_ sender: Any) {}
+
+    private func setupUI() {
+        nameLbl.text = "Name: \(user?.name ?? "")"
+        userNameLbl.text = "Username: \(user?.username ?? "")"
+        email.text = "Email: \(user?.email ?? "")"
+        phone.text = "Phone: \(user?.phone ?? "")"
+        website.text = "Website: \(user?.website ?? "")"
+    }
 }

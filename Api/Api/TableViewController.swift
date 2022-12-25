@@ -28,19 +28,19 @@ class TableViewController: UITableViewController {
         let user = users[indexPath.row]
         cell.textLabel?.text = user.name
         cell.detailTextLabel?.text = user.username
-
+print(user)
         return cell
     }
     
     // MARK: - Table view delegate
 
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let user = users[indexPath.row]
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "DetailUserVC") as! DetailUserVC
-//        vc.user = user
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     /*
     // Override to support conditional editing of the table view.
