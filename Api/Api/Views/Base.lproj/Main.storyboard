@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-686" y="-429"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="xfk-vU-eXx">
             <objects>
-                <viewController id="pv2-VN-79e" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pv2-VN-79e" customClass="UserViewController" customModule="Api" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zWU-5Y-s0q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +183,13 @@
                             <constraint firstItem="r4O-v5-vp5" firstAttribute="trailing" secondItem="fR7-TB-8ym" secondAttribute="trailing" constant="120" id="wRC-Gg-JXm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="sEi-R3-Jax" id="m4D-81-xAv"/>
+                        <outlet property="nameLbl" destination="eTM-5d-d8b" id="ZIW-rr-jm2"/>
+                        <outlet property="phone" destination="8bk-pp-8ko" id="4Zl-Q5-u5f"/>
+                        <outlet property="userNameLbl" destination="xT7-kQ-kCt" id="eMs-QH-Ejq"/>
+                        <outlet property="website" destination="aBC-gy-xRc" id="zrw-vP-Iqf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEz-Zc-fe9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
