@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -162,21 +163,38 @@
                                 <rect key="frame" x="120" y="425.66666666666669" width="153" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Albums"/>
+                                <connections>
+                                    <action selector="albumsbtn:" destination="pv2-VN-79e" eventType="touchUpInside" id="epq-aG-JH7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kqu-FN-JgX">
                                 <rect key="frame" x="120" y="485" width="153" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ToDO"/>
+                                <connections>
+                                    <action selector="toDobtn:" destination="pv2-VN-79e" eventType="touchUpInside" id="T1g-ug-xK4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdQ-Ov-l6j">
+                                <rect key="frame" x="25" y="544.33333333333337" width="343" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Map"/>
+                                <connections>
+                                    <action selector="map:" destination="pv2-VN-79e" eventType="touchUpInside" id="nMo-Zh-Woe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r4O-v5-vp5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Tab-3K-fJG" firstAttribute="leading" secondItem="r4O-v5-vp5" secondAttribute="leading" constant="20" id="2XQ-rd-4WL"/>
+                            <constraint firstItem="IdQ-Ov-l6j" firstAttribute="top" secondItem="Kqu-FN-JgX" secondAttribute="bottom" constant="25" id="4Hz-Kq-Jab"/>
                             <constraint firstItem="Kqu-FN-JgX" firstAttribute="top" secondItem="G98-nt-tb4" secondAttribute="bottom" constant="25" id="Ja0-7y-qyB"/>
                             <constraint firstItem="fR7-TB-8ym" firstAttribute="top" secondItem="Tab-3K-fJG" secondAttribute="bottom" constant="130.33000000000001" id="N8Y-X6-iDB"/>
                             <constraint firstItem="Kqu-FN-JgX" firstAttribute="leading" secondItem="r4O-v5-vp5" secondAttribute="leading" constant="120" id="SAh-3e-1qW"/>
                             <constraint firstItem="G98-nt-tb4" firstAttribute="top" secondItem="fR7-TB-8ym" secondAttribute="bottom" constant="25" id="aSk-G4-fNT"/>
+                            <constraint firstItem="r4O-v5-vp5" firstAttribute="trailing" secondItem="IdQ-Ov-l6j" secondAttribute="trailing" constant="25" id="bTx-b9-QaS"/>
+                            <constraint firstItem="IdQ-Ov-l6j" firstAttribute="leading" secondItem="r4O-v5-vp5" secondAttribute="leading" constant="25" id="di1-su-k3C"/>
                             <constraint firstItem="fR7-TB-8ym" firstAttribute="leading" secondItem="r4O-v5-vp5" secondAttribute="leading" constant="120" id="i1j-Nb-vHO"/>
                             <constraint firstItem="Tab-3K-fJG" firstAttribute="top" secondItem="r4O-v5-vp5" secondAttribute="top" constant="25" id="iMb-s9-U4N"/>
                             <constraint firstItem="r4O-v5-vp5" firstAttribute="trailing" secondItem="Kqu-FN-JgX" secondAttribute="trailing" constant="120" id="oNR-mE-FdJ"/>
@@ -196,7 +214,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEz-Zc-fe9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="184" y="-682"/>
+            <point key="canvasLocation" x="183.96946564885496" y="-682.3943661971831"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="zWC-C6-Lzw">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pT6-8L-iyn" customClass="MapViewController" customModule="Api" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzD-Bb-SBA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xm-HA-DzZ">
+                                <rect key="frame" x="20" y="84" width="353" height="709"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4u9-if-CyM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4u9-if-CyM" firstAttribute="trailing" secondItem="9xm-HA-DzZ" secondAttribute="trailing" constant="20" id="GY9-Id-B93"/>
+                            <constraint firstItem="4u9-if-CyM" firstAttribute="bottom" secondItem="9xm-HA-DzZ" secondAttribute="bottom" constant="25" id="dOE-uK-17B"/>
+                            <constraint firstItem="9xm-HA-DzZ" firstAttribute="leading" secondItem="4u9-if-CyM" secondAttribute="leading" constant="20" id="lTe-5W-aRh"/>
+                            <constraint firstItem="9xm-HA-DzZ" firstAttribute="top" secondItem="4u9-if-CyM" secondAttribute="top" constant="25" id="uyo-t3-YcZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elA-et-rpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="-667"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="RzE-MX-FmE">

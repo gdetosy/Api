@@ -13,6 +13,7 @@
 		96A074572958220A00D64369 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A074562958220A00D64369 /* UserViewController.swift */; };
 		96A0745929582D4800D64369 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96A0745829582D4800D64369 /* Post.storyboard */; };
 		96A0745B2958391D00D64369 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0745A2958391D00D64369 /* PostTableViewController.swift */; };
+		96A0745D295A157900D64369 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A0745C295A157900D64369 /* MapViewController.swift */; };
 		96A323DD2957551A0050235F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A323DC2957551A0050235F /* AppDelegate.swift */; };
 		96A323DF2957551A0050235F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A323DE2957551A0050235F /* SceneDelegate.swift */; };
 		96A323E12957551A0050235F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A323E02957551A0050235F /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		96A074562958220A00D64369 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		96A0745829582D4800D64369 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		96A0745A2958391D00D64369 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		96A0745C295A157900D64369 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		96A323D92957551A0050235F /* Api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Api.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A323DC2957551A0050235F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96A323DE2957551A0050235F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		96A0745E295A159600D64369 /* cControllers */ = {
+			isa = PBXGroup;
+			children = (
+				96A323F0295758F70050235F /* CollectionViewController.swift */,
+				96A0745C295A157900D64369 /* MapViewController.swift */,
+				96A074562958220A00D64369 /* UserViewController.swift */,
+				96A0745A2958391D00D64369 /* PostTableViewController.swift */,
+				96A323E02957551A0050235F /* ViewController.swift */,
+				96A07450295769D300D64369 /* Server.swift */,
+				96A0744E295768AD00D64369 /* TableViewController.swift */,
+				96A0745429576A6300D64369 /* Users.swift */,
+				96A323F2295759780050235F /* CollectionViewCell.swift */,
+			);
+			path = cControllers;
+			sourceTree = "<group>";
+		};
 		96A323D02957551A0050235F = {
 			isa = PBXGroup;
 			children = (
@@ -92,14 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				96A0745329576A1100D64369 /* Views */,
-				96A323F0295758F70050235F /* CollectionViewController.swift */,
-				96A074562958220A00D64369 /* UserViewController.swift */,
-				96A0745A2958391D00D64369 /* PostTableViewController.swift */,
-				96A323E02957551A0050235F /* ViewController.swift */,
-				96A07450295769D300D64369 /* Server.swift */,
-				96A0744E295768AD00D64369 /* TableViewController.swift */,
-				96A0745429576A6300D64369 /* Users.swift */,
-				96A323F2295759780050235F /* CollectionViewCell.swift */,
+				96A0745E295A159600D64369 /* cControllers */,
 				96A323E52957551E0050235F /* Assets.xcassets */,
 				96A07452295769F700D64369 /* delegates */,
 				96A323EA2957551E0050235F /* Info.plist */,
@@ -179,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A0745D295A157900D64369 /* MapViewController.swift in Sources */,
 				96A0745529576A6400D64369 /* Users.swift in Sources */,
 				96A074572958220A00D64369 /* UserViewController.swift in Sources */,
 				96A07451295769D300D64369 /* Server.swift in Sources */,

@@ -30,6 +30,20 @@ class UserViewController: UIViewController {
 
     @IBAction func toDobtn(_ sender: Any) {}
 
+  
+    @IBAction func map(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        vc.user = user
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
+    }
+    
+
+    
+    
     private func setupUI() {
         nameLbl.text = "Name: \(user?.name ?? "")"
         userNameLbl.text = "Username: \(user?.username ?? "")"
