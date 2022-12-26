@@ -6,16 +6,23 @@
 //
 
 import UIKit
-
+import MapKit
 class MapViewController: UIViewController {
-    var user: User?
+    
+    @IBOutlet weak var map: MKMapView!
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
